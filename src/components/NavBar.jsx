@@ -126,7 +126,7 @@ function NavBar() {
               key={page}
               onClick={handleCloseNavMenu}
               sx={{
-                my: 2,
+                mx: 2,
                 textAlign: "center",
                 textTransform: "none",
                 color: "black",
@@ -134,7 +134,10 @@ function NavBar() {
                 display: "block",
               }}
             >
-              <Link sx={{ textDecoration: "none" }} to={`${page}`}>
+              <Link
+                style={{ textDecoration: "none", color: "black" }}
+                to={`${page}`}
+              >
                 {page}
               </Link>
             </Button>
