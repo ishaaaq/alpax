@@ -1,6 +1,11 @@
 import { Box, Container, Grid, Grid2, Stack, Typography } from "@mui/material";
 import React from "react";
-import { StyledButton } from "./styledComponents/StyledComponents";
+import {
+  SectionHeader,
+  SectionSubHeading,
+  SectionTag,
+  StyledButton,
+} from "./styledComponents/StyledComponents";
 import WhatWeOfferCard from "./WhatWeOfferCard";
 
 const WhatWeOfferSection = () => {
@@ -28,50 +33,13 @@ const WhatWeOfferSection = () => {
         }}
       >
         <Stack direction={"column"} gap={".75rem"}>
-          <Box
-            sx={{
-              width: "83px",
-              height: "37px",
-              bgcolor: "#E6ECF1",
-              textAlign: "center",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              borderRadius: "8px",
-            }}
-          >
-            <Typography
-              sx={{
-                color: "#121212",
-                fontWeight: 500,
-                fontSize: { xs: ".75rem", sm: ".875rem" },
-                position: "relative",
-              }}
-            >
-              Services
-            </Typography>
-          </Box>
-          <Typography
-            sx={{
-              fontWeight: 500,
-              fontSize: { xs: "1.5rem", sm: "2rem" },
-              color: "black",
-            }}
-          >
-            What We Offer
-          </Typography>
-          <Typography
-            sx={{
-              fontWeight: 400,
-              fontSize: { md: ".75rem", sm: ".875" },
-              color: "#121212",
-              width: "27rem",
-            }}
-          >
+          <SectionTag>Services</SectionTag>
+          <SectionHeader>What We Offer</SectionHeader>
+          <SectionSubHeading>
             AEC (Architecture Engineering Consultancy) Nigerian company
             established to provide first-class professional specialist
             consultancy services to corporate and individual clients.
-          </Typography>
+          </SectionSubHeading>
         </Stack>
         <Box sx={{ maxWidth: "217px", mt: "auto" }}>
           <StyledButton>See more solution</StyledButton>
