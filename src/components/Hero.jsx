@@ -1,5 +1,6 @@
 import { Box, Container, Stack, Typography } from "@mui/material";
 import React from "react";
+import Slider from "./Slider";
 const Hero = () => {
   return (
     <Container disableGutters>
@@ -18,10 +19,9 @@ const Hero = () => {
             height: "100%",
             borderRadius: ".75rem",
             display: "flex",
-            flexDirection: "flex-col",
+            flexDirection: "column",
             justifyContent: "center",
             color: "white",
-            padding: "1rem",
           }}
         >
           <Stack
@@ -49,6 +49,7 @@ const Hero = () => {
               innovative solutions that meet your unique needs.
             </Typography>
           </Stack>
+          <Slider />
         </div>
       </Box>
     </Container>
