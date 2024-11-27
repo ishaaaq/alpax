@@ -14,7 +14,7 @@ export const StyledButton = styled(Button)(({ theme }) => ({
   textTransform: "none",
 }));
 
-export const SectionTag = ({ props }) => {
+export const SectionTag = ({ children }) => {
   return (
     <Box
       sx={{
@@ -36,7 +36,7 @@ export const SectionTag = ({ props }) => {
           position: "relative",
         }}
       >
-        {props}
+        {children}
       </Typography>
     </Box>
   );
@@ -44,7 +44,7 @@ export const SectionTag = ({ props }) => {
 
 export const SectionHeader = styled(Typography)({
   fontWeight: 500,
-  fontSize: { xs: "1.5rem", sm: "2rem" },
+  fontSize: "2rem",
   color: "black",
 });
 
