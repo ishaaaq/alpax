@@ -12,6 +12,7 @@ export const StyledButton = styled(Button)(({ theme }) => ({
   fontWeight: 500,
   height: "44px",
   textTransform: "none",
+  maxWidth: "13.5rem",
 }));
 
 export const SectionTag = ({ children }) => {
@@ -50,7 +51,7 @@ export const SectionHeader = styled(Typography)({
 
 export const SectionSubHeading = styled(Typography)({
   fontWeight: 400,
-  fontSize: { md: ".75rem", sm: ".875" },
+  fontSize: ".75rem",
   color: "#121212",
   width: "27rem",
 });
