@@ -4,6 +4,7 @@ import WhatWeOfferCard from "../components/WhatWeOfferCard";
 import WhatWeOfferSection from "../components/WhatWeOfferSection";
 import { Container } from "@mui/material";
 import WhyAlpax from "../components/WhyAlpax";
+import Works from "../components/Works";
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
         <Hero />
         <WhatWeOfferSection />
         <WhyAlpax />
+        <Works />
       </Container>
     </>
   );
