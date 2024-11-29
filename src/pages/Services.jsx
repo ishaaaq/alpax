@@ -1,7 +1,12 @@
 import React from "react";
+import OtherPagesHero from "../components/OtherPagesHero";
 
 const Services = () => {
-  return <div></div>;
+  return (
+    <div>
+      <OtherPagesHero>Our Services</OtherPagesHero>
+    </div>
+  );
 };
 
 export default Services;
