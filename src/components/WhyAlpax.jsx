@@ -6,6 +6,7 @@ import {
   SectionTag,
 } from "./styledComponents/StyledComponents";
 import ReasonToUseCard from "./ReasonToUseCard";
+import MobileSlider from "./MobileSlider";
 
 const WhyAlpax = () => {
   return (
@@ -18,7 +19,7 @@ const WhyAlpax = () => {
         flexDirection: "column",
         justifyContent: "space-between",
         height: {
-          sm: "19.2rem",
+          sm: "21.2rem",
           md: "28.8rem",
         },
         py: {
@@ -41,14 +42,25 @@ const WhyAlpax = () => {
         </SectionSubHeading>
       </Stack>
       <Stack
-        direction={{ sm: "row", xs: "column" }}
+        direction={{ sm: "row" }}
         gap={"1.5rem"}
-        sx={{ width: "100%", mt: { xs: "1rem", md: "0rem" } }}
+        sx={{
+          width: "100%",
+          mt: { xs: "1rem", md: "0rem" },
+          display: { xs: "none", sm: "flex" },
+        }}
       >
         {[1, 2, 3].map((_, index) => (
           <ReasonToUseCard key={index} />
         ))}
       </Stack>
+      <Box sx={{ display: { xs: "inline", sm: "none" } }}>
+        <MobileSlider>
+          {[1, 2, 3].map((_, index) => (
+            <ReasonToUseCard key={index} />
+          ))}
+        </MobileSlider>
+      </Box>
     </Box>
   );
 };

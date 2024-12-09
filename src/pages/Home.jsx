@@ -6,6 +6,7 @@ import { Container } from "@mui/material";
 import WhyAlpax from "../components/WhyAlpax";
 import Works from "../components/Works";
 import GetStartedCard from "../components/GetStartedCard";
+import Testimonials from "../components/Testimonials";
 
 const Home = () => {
   return (
@@ -22,6 +23,7 @@ const Home = () => {
         <WhatWeOfferSection />
         <WhyAlpax />
         <Works />
+        <Testimonials />
         <GetStartedCard />
       </Container>
     </>

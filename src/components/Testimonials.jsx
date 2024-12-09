@@ -7,11 +7,12 @@ import {
 } from "./styledComponents/StyledComponents";
 import WhatWeOfferCard from "./WhatWeOfferCard";
 import theme from "../styles/theme";
-import DesktopSlider from "./ReusableSlider";
 import ReusableSlider from "./ReusableSlider";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
-const Works = () => {
+import MobileSlider from "./MobileSlider";
+import ReasonToUseCard from "./ReasonToUseCard";
+const Testimonials = () => {
   const sliderRef = useRef(null);
   return (
     <Box
@@ -43,8 +44,8 @@ const Works = () => {
         }}
       >
         <Stack direction={"column"} gap={".75rem"}>
-          <SectionTag>Works</SectionTag>
-          <SectionHeader>Case Studies</SectionHeader>
+          <SectionTag>Testimonials</SectionTag>
+          <SectionHeader>What Our Customers Say About Us</SectionHeader>
           <SectionSubHeading style={{ width: { md: "43rem", xs: "0rem" } }}>
             {" "}
             A short text that highlight companies success, make it descriptive.
@@ -85,7 +86,7 @@ const Works = () => {
           </Button>
         </Stack>
       </Box>
-      <Stack
+      {/* <Stack
         direction={{ sm: "row", xs: "column" }}
         gap={"1.5rem"}
         sx={{
@@ -98,8 +99,17 @@ const Works = () => {
         {[1, 2, 3].map((_, index) => (
           <WhatWeOfferCard key={index} />
         ))}
-      </Stack>
-      <Box
+      </Stack> */}
+      <Box sx={{ display: { xs: "inline", sm: "none" } }}>
+        <MobileSlider>
+          {[1, 2, 3].map((_, index) => (
+            <ReasonToUseCard key={index} />
+          ))}
+        </MobileSlider>
+      </Box>
+      <Stack
+        direction={"row"}
+        gap={"1.5rem"}
         sx={{
           display: { xs: "none", sm: "block" },
           mt: "2rem",
@@ -107,12 +117,12 @@ const Works = () => {
       >
         <ReusableSlider ref={sliderRef}>
           {[1, 2, 3, 4, 5, 6, 7].map((_, index) => (
-            <WhatWeOfferCard key={index} />
+            <ReasonToUseCard key={index} />
           ))}
         </ReusableSlider>
-      </Box>
+      </Stack>
     </Box>
   );
 };
 
-export default Works;
+export default Testimonials;
