@@ -16,14 +16,10 @@ const Works = () => {
   return (
     <Box
       sx={{
-        mt: "4rem",
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",
-        height: {
-          sm: "19.2rem",
-          md: "28.8rem",
-        },
+
         py: {
           md: "3.5rem",
           xs: ".5rem",

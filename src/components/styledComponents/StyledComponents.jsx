@@ -19,7 +19,8 @@ export const SectionTag = ({ children }) => {
   return (
     <Box
       sx={{
-        width: "83px",
+        maxWidth: "7.1rem",
+        width: "fit-content",
         height: "37px",
         bgcolor: "#E6ECF1",
         textAlign: "center",
@@ -27,6 +28,7 @@ export const SectionTag = ({ children }) => {
         alignItems: "center",
         justifyContent: "center",
         borderRadius: "8px",
+        px: ".75rem",
       }}
     >
       <Typography

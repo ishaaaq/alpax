@@ -12,19 +12,21 @@ import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 import MobileSlider from "./MobileSlider";
 import ReasonToUseCard from "./ReasonToUseCard";
+import TestimonialsCard from "./TestimonialsCard";
 const Testimonials = () => {
   const sliderRef = useRef(null);
   return (
     <Box
       sx={{
-        mt: "4rem",
+        bgcolor: "white",
+        borderRadius: {
+          xs: "none",
+          sm: "12px",
+        },
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",
-        height: {
-          sm: "19.2rem",
-          md: "28.8rem",
-        },
+
         py: {
           md: "3.5rem",
           xs: ".5rem",
@@ -103,7 +105,7 @@ const Testimonials = () => {
       <Box sx={{ display: { xs: "inline", sm: "none" } }}>
         <MobileSlider>
           {[1, 2, 3].map((_, index) => (
-            <ReasonToUseCard key={index} />
+            <TestimonialsCard key={index} />
           ))}
         </MobileSlider>
       </Box>
@@ -117,7 +119,7 @@ const Testimonials = () => {
       >
         <ReusableSlider ref={sliderRef}>
           {[1, 2, 3, 4, 5, 6, 7].map((_, index) => (
-            <ReasonToUseCard key={index} />
+            <TestimonialsCard key={index} />
           ))}
         </ReusableSlider>
       </Stack>

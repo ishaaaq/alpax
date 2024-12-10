@@ -13,7 +13,10 @@ const WhyAlpax = () => {
     <Box
       sx={{
         bgcolor: "white",
-        borderRadius: "12px",
+        borderRadius: {
+          xs: "none",
+          sm: "12px",
+        },
         mt: "4rem",
         display: "flex",
         flexDirection: "column",
