@@ -17,7 +17,6 @@ const GetStartedCard = () => {
         width: "100%",
         height: "22.5rem",
         position: "relative",
-        mt: "9rem",
         pt: "3.5rem",
       }}
     >

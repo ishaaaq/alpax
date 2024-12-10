@@ -8,6 +8,7 @@ import Works from "../components/Works";
 import GetStartedCard from "../components/GetStartedCard";
 import Testimonials from "../components/Testimonials";
 import Faq from "../components/Faq";
+import Footer from "../components/Footer";
 
 const Home = () => {
   return (
@@ -27,6 +28,7 @@ const Home = () => {
         <Testimonials />
         <Faq />
         <GetStartedCard />
+        <Footer />
       </Container>
     </>
   );
