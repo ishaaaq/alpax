@@ -1,17 +1,13 @@
 import React from "react";
 import image from "../../public/bg.jpeg";
 import { Box, Stack, Typography } from "@mui/material";
-const WhatWeOfferCard = () => {
+const WhatWeOfferCard = ({ title, description }) => {
   return (
     <Stack
       direction="column"
       gap="1rem"
       sx={{
-        width: {
-          xs: "29rem",
-          sm: "21rem",
-          md: "21rem",
-        },
+        width: "100%",
         height: "20rem",
       }}
     >
@@ -35,15 +31,13 @@ const WhatWeOfferCard = () => {
         <Typography
           sx={{ fontWeight: 600, fontSize: "1rem", color: "black", my: "auto" }}
         >
-          Service Title
+          {title}
         </Typography>
       </Stack>
       <Typography
         sx={{ fontWeight: 400, fontSize: ".75rem", color: "#121212" }}
       >
-        Text that concisely describes the services should be written here, it
-        should have at most 4 lines of text, that way users can quickly glance
-        through and get the concept.
+        {description}
       </Typography>
     </Stack>
   );

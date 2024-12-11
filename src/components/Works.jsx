@@ -11,6 +11,7 @@ import DesktopSlider from "./ReusableSlider";
 import ReusableSlider from "./ReusableSlider";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
+import services from "../data";
 const Works = () => {
   const sliderRef = useRef(null);
   return (
@@ -91,8 +92,12 @@ const Works = () => {
           display: { xs: "flex", sm: "none" },
         }}
       >
-        {[1, 2, 3].map((_, index) => (
-          <WhatWeOfferCard key={index} />
+        {services.slice(0, 3).map((service, index) => (
+          <WhatWeOfferCard
+            key={index}
+            title={service.title}
+            description={service.description}
+          />
         ))}
       </Stack>
       <Box
@@ -102,8 +107,12 @@ const Works = () => {
         }}
       >
         <ReusableSlider ref={sliderRef}>
-          {[1, 2, 3, 4, 5, 6, 7].map((_, index) => (
-            <WhatWeOfferCard key={index} />
+          {services.map((service, index) => (
+            <WhatWeOfferCard
+              key={index}
+              title={service.title}
+              description={service.description}
+            />
           ))}
         </ReusableSlider>
       </Box>

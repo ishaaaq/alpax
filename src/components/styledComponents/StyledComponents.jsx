@@ -49,11 +49,15 @@ export const SectionHeader = styled(Typography)({
   fontWeight: 500,
   fontSize: "2rem",
   color: "black",
+  textAlign: "center",
 });
 
 export const SectionSubHeading = styled(Typography)({
   fontWeight: 400,
   fontSize: ".75rem",
   color: "#121212",
-  width: "27rem",
+  width: {
+    xs: "26.4rem",
+    sm: "27rem",
+  },
 });

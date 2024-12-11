@@ -7,7 +7,7 @@ import {
   StyledButton,
 } from "./styledComponents/StyledComponents";
 import WhatWeOfferCard from "./WhatWeOfferCard";
-
+import services from "../data";
 const WhatWeOfferSection = () => {
   return (
     <Stack
@@ -41,7 +41,13 @@ const WhatWeOfferSection = () => {
             consultancy services to corporate and individual clients.
           </SectionSubHeading>
         </Stack>
-        <Box sx={{ maxWidth: "217px", mt: "auto" }}>
+        <Box
+          sx={{
+            maxWidth: "217px",
+            mt: "auto",
+            display: { xs: "none", sm: "block" },
+          }}
+        >
           <StyledButton>See more solution</StyledButton>
         </Box>
       </Stack>
@@ -56,7 +62,7 @@ const WhatWeOfferSection = () => {
           mt: { xs: "1rem", md: "0rem" },
         }}
       >
-        {[1, 2, 3, 4].map((_, index) => (
+        {services.slice(0, 4).map((service, index) => (
           <Box
             key={index}
             sx={{
@@ -72,7 +78,10 @@ const WhatWeOfferSection = () => {
               alignItems: "center",
             }}
           >
-            <WhatWeOfferCard />
+            <WhatWeOfferCard
+              title={service.title}
+              description={service.description}
+            />
           </Box>
         ))}
       </Stack>
