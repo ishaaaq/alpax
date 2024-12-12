@@ -4,10 +4,14 @@ const OfficeMap = () => {
   return (
     <div
       style={{
-        width: "28.4rem",
-        height: "39.2rem",
+        width: "38.2rem",
+        height: "27.4rem",
+
         borderRadius: "8px",
         overflow: "hidden",
+        backgroundColor: "white",
+        padding: "5px",
+        border: "rgba(0, 0, 0, 0.25) 0.5px solid",
       }}
     >
       <iframe

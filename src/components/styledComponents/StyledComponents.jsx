@@ -60,3 +60,22 @@ export const SectionSubHeading = styled(Typography)({
     sm: "27rem",
   },
 });
+
+export const Title = styled(Typography)({
+  fontWeight: 600,
+  fontSize: "1rem",
+  marginBottom: ".56rem",
+});
+
+export const Subtitle = styled(Typography)({
+  fontWeight: 400,
+  fontSize: ".75rem",
+  marginBottom: "1rem",
+});
+
+export const Contact = styled(Typography)({
+  fontWeight: 600,
+  fontSize: ".75rem",
+  textTransform: "underline",
+  cursor: "pointer",
+});

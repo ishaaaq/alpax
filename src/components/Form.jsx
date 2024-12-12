@@ -4,6 +4,7 @@ import * as Yup from "yup";
 import { Box, Button, Typography, useTheme } from "@mui/material";
 const fieldStyle = {
   width: "100%",
+  height: "2.8rem",
   padding: "10px",
   border: "1px solid #8B8B8B",
   borderRadius: "8px",
@@ -39,8 +40,7 @@ const ContactForm = () => {
   return (
     <Box
       sx={{
-        maxWidth: "600px",
-        mx: "auto",
+        width: "100%",
         p: 4,
         bgcolor: "#F6F6F6",
         borderRadius: "8px",
@@ -115,7 +115,7 @@ const ContactForm = () => {
                 placeholder="Message"
                 style={{
                   ...fieldStyle,
-                  height: "100px", // Extra height for textarea
+                  height: "10.3rem",
                 }}
               />
               <Typography variant="caption" color="error">
@@ -133,6 +133,7 @@ const ContactForm = () => {
                 textTransform: "none",
                 boxShadow: "none",
                 color: "white",
+                height: "3.2rem",
                 bgcolor: theme.palette.secondary.main,
               }}
               disabled={isSubmitting}
